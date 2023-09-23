@@ -1,4 +1,4 @@
-module mem;
+module std.mem;
 
 import core.lifetime;
 import core.stdc.stdlib;

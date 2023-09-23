@@ -9,3 +9,20 @@ Note that just like any other `unittest` in druntime, they will also be compiled
 and executed without `-betterC`.
 */
 package(core) enum betterC = 1;
+
+// Basic GCC attribute shenanigans
+
+private struct Attribute(A...) {
+    A arguments;
+}
+
+@system
+auto attribute(A...)(A arguments) if (A.length > 0 && is(A[0] == string)) {
+    return Attribute!A(arguments);
+}
+
+auto section(string sectionName) {
+    return attribute("section", sectionName);
+}
+
+enum used = attribute("used");

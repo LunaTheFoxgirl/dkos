@@ -7,3 +7,5 @@ toolchainRequirements "sh-elf-gdc"
 
 dflags "-fno-druntime" "-nophoboslib" "-betterC"
 targetPath "out/"
+
+libs "kallisti"

@@ -1671,8 +1671,8 @@ alias pvr_dr_state_t = uint;
 pragma(inline, true)
 void pvr_dr_init(ref pvr_dr_state_t vtx_buf_ptr) {
     vtx_buf_ptr = 0;
-    *QACR0 = (((cast(uint)PVR_TA_INPUT) >> 26) << 2) & 0x1c;
-    *QACR1 = (((cast(uint)PVR_TA_INPUT) >> 26) << 2) & 0x1c;
+    QACR0 = (((cast(uint)PVR_TA_INPUT) >> 26) << 2) & 0x1c;
+    QACR1 = (((cast(uint)PVR_TA_INPUT) >> 26) << 2) & 0x1c;
 }
 
 /** \brief  Obtain the target address for Direct Rendering.
