@@ -5,6 +5,4 @@ copyright "Copyright © 2023, Luna"
 license "BSL-1.0"
 
 dflags "-fno-druntime" "-nophoboslib" "-betterC"
-
-targetType "executable"
 targetPath "out/"
