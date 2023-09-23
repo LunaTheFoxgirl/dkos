@@ -1,5 +1,5 @@
 module mem;
-import std.traits;
+
 import core.lifetime;
 import core.stdc.stdlib;
 

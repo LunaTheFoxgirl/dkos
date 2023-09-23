@@ -1,6 +1,6 @@
 module core.internal.entrypoint;
 
-import newlib.stdlib;
+import core.stdc.stdlib;
 
 template _d_cmain() {
     extern(C) {

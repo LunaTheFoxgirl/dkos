@@ -3,6 +3,7 @@ description "KallistOS for DLang"
 authors "Luna"
 copyright "Copyright © 2023, Luna"
 license "BSL-1.0"
+toolchainRequirements "sh-elf-gdc"
 
 dflags "-fno-druntime" "-nophoboslib" "-betterC"
 targetPath "out/"
