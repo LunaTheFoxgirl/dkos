@@ -15,6 +15,9 @@
  
 module kos.img;
 
+extern(C):
+@nogc:
+nothrow:
 
 /** \brief  Platform-indpendent image type.
  
@@ -38,7 +41,7 @@ struct kos_img_t {
                              \see   kos_img_fmts
                              \see   kos_img_fmt_macros */
     uint byte_count;  /**< \brief Length of the image data, in bytes. */
-};
+}
  
 /** \defgroup   kos_img_fmt_macros  Macros for accessing the format of an image
  
