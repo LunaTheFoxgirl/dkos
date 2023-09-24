@@ -6,11 +6,12 @@ toolchainRequirements "sh-elf-gdc"
 systemDependencies "KallistiOS installed in /opt/toolchains/dc via gcc or cygwin"
 description "KallistOS for DLang"
 
-lflags "-flto" "-ffreestanding" "-nostdlib" "-shared" "-T" "$PACKAGE_DIR/ldscripts/shlelf.xc"
-dflags "-nophoboslib" "-ffunction-sections" "-fdata-sections" "-matomic-model=soft-imask" "-ftls-model=local-exec" "-flto"
+lflags "-nostdlib" "-T" "$PACKAGE_DIR/ldscripts/shlelf.xc"
+dflags "-nophoboslib" "-ffunction-sections" "-fdata-sections" "-matomic-model=soft-imask" "-ftls-model=local-exec" "-flto" "-m4-single-only"
 targetPath "out/"
 
 sourceFiles \
     "/opt/toolchains/dc/kos/lib/dreamcast/libkallisti.a" \
     "/opt/toolchains/dc/kos/addons/lib/dreamcast/*.a" \
-    "/opt/toolchains/dc/sh-elf/sh-elf/lib/libc.a"
+    "/opt/toolchains/dc/sh-elf/sh-elf/lib/libc.a"\
+    "/opt/toolchains/dc/sh-elf/sh-elf/lib/libm.a"

@@ -82,15 +82,6 @@ wchar_t* fgetws(wchar_t* s, int n, FILE* stream);
 ///
 int      fputws(const scope wchar_t* s, FILE* stream);
 
-// No unsafe pointer manipulation.
-extern (D) @trusted
-{
-    ///
-    wint_t getwchar()                     { return fgetwc(stdin);     }
-    ///
-    wint_t putwchar(wchar_t c)            { return fputwc(c,stdout);  }
-}
-
 ///
 alias getwc = fgetwc;
 ///

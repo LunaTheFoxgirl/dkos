@@ -137,11 +137,13 @@ enum
 }
 
 ///
-extern shared FILE* stdin;
+extern __gshared FILE* stdin;
+
 ///
-extern shared FILE* stdout;
+extern __gshared FILE* stdout;
+
 ///
-extern shared FILE* stderr;
+extern __gshared FILE* stderr;
 
 ///
 int remove(scope const char* filename);
