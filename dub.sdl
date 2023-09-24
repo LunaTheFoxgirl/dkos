@@ -1,11 +1,15 @@
 name "dkos"
-description "KallistOS for DLang"
-authors "Luna"
-copyright "Copyright © 2023, Luna"
 license "BSL-1.0"
+copyright "Copyright © 2023, Luna"
+authors "Luna"
 toolchainRequirements "sh-elf-gdc"
+systemDependencies "KallistiOS installed in /opt/toolchains/dc via gcc or cygwin"
+description "KallistOS for DLang"
 
-dflags "-fno-druntime" "-nophoboslib" "-betterC"
+dflags "-nophoboslib" "-ffunction-sections" "-fdata-sections" "-matomic-model=soft-imask" "-ftls-model=local-exec"
 targetPath "out/"
 
-libs "kallisti"
+sourceFiles \
+    "/opt/toolchains/dc/kos/lib/dreamcast/libkallisti.a" \
+    "/opt/toolchains/dc/kos/addons/lib/dreamcast/*.a" \
+    "/opt/toolchains/dc/sh-elf/sh-elf/lib/libc.a"
