@@ -1,4 +1,7 @@
 module core.stdc.config;
+extern(C):
+nothrow:
+@nogc:
 
 static if ( (void*).sizeof > int.sizeof ) {
     enum __c_longlong : long;
