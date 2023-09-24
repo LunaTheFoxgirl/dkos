@@ -6,6 +6,7 @@
     \author Luna the Foxgirl
 */
 module extra.color;
+import std.math;
 
 /**
     Converts HSV to RGB
