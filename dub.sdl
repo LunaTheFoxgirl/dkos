@@ -6,7 +6,7 @@ toolchainRequirements "sh-elf-gdc"
 systemDependencies "KallistiOS installed in /opt/toolchains/dc via gcc or cygwin"
 description "KallistOS for DLang"
 
-lflags "-flto" "-ffreestanding" "-nostdlib" "-shared"
+lflags "-flto" "-ffreestanding" "-nostdlib" "-shared" "-T" "$PACKAGE_DIR/ldscripts/shlelf.xc"
 dflags "-nophoboslib" "-ffunction-sections" "-fdata-sections" "-matomic-model=soft-imask" "-ftls-model=local-exec" "-flto"
 targetPath "out/"
 
