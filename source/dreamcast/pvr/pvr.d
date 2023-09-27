@@ -17,7 +17,7 @@
     \author Benoit Miller
     \author Luna the Foxgirl
 */
-module dreamcast.pvr;
+module dreamcast.pvr.pvr;
 import dreamcast.sq;
 import dreamcast.arch.types;
 import dreamcast.arch.memory;
@@ -65,14 +65,14 @@ alias pvr_list_t = uint;
 struct pvr_poly_cxt_t {
     int     list_type;          /**< \brief Primitive list
                                      \see   pvr_lists */
-    gen gen;
-    blend blend;
-    fmt fmt;
-    depth depth;
-    txr txr;
-    txr txr2;
+    gen_t gen;
+    blend_t blend;
+    fmt_t fmt;
+    depth_t depth;
+    txr_t txr;
+    txr_t txr2;
 
-    struct gen {
+    struct gen_t {
         int     alpha;          /**< \brief Enable or disable alpha outside modifier
                                      \see   pvr_alpha_switch */
         int     shading;        /**< \brief Shading type
@@ -96,7 +96,7 @@ struct pvr_poly_cxt_t {
                                      \see   pvr_colclamp_switch */
     }
 
-    struct blend {
+    struct blend_t {
         int     src;            /**< \brief Source blending mode outside modifier
                                      \see   pvr_blend_modes */
         int     dst;            /**< \brief Dest blending mode outside modifier
@@ -115,7 +115,7 @@ struct pvr_poly_cxt_t {
                                      \see   pvr_blend_switch */
     }
 
-    struct fmt {
+    struct fmt_t {
         int     color;          /**< \brief Color format in vertex
                                      \see   pvr_color_fmts */
         int     uv;             /**< \brief U/V data format in vertex
@@ -124,14 +124,14 @@ struct pvr_poly_cxt_t {
                                      \see   pvr_mod_switch */
     }    
 
-    struct depth {
+    struct depth_t {
         int     comparison;     /**< \brief Depth comparison mode
                                      \see pvr_depth_modes */
         int     write;          /**< \brief Enable or disable depth writes
                                      \see pvr_depth_switch */
     }
 
-    struct txr {
+    struct txr_t {
         int     enable;         /**< \brief Enable/disable texturing
                                      \see   pvr_txr_switch */
         int     filter;         /**< \brief Filtering mode
@@ -171,11 +171,11 @@ struct pvr_poly_cxt_t {
 struct pvr_sprite_cxt_t {
     int     list_type;          /**< \brief Primitive list
                                      \see   pvr_lists */
-    gen gen;
-    blend blend;
-    depth depth;
-    txr txr;
-    struct gen {
+    gen_t gen;
+    blend_t blend;
+    depth_t depth;
+    txr_t txr;
+    struct gen_t {
         int     alpha;          /**< \brief Enable or disable alpha
                                      \see   pvr_alpha_switch */
         int     fog_type;       /**< \brief Fog type
@@ -190,7 +190,7 @@ struct pvr_sprite_cxt_t {
                                      \see   pvr_offset_switch */
     }
     
-    struct blend {
+    struct blend_t {
         int     src;            /**< \brief Source blending mode
                                      \see   pvr_blend_modes */
         int     dst;            /**< \brief Dest blending mode
@@ -201,14 +201,14 @@ struct pvr_sprite_cxt_t {
                                      \see   pvr_blend_switch */
     }
 
-    struct depth {
+    struct depth_t {
         int     comparison;     /**< \brief Depth comparison mode
                                      \see pvr_depth_modes */
         int     write;          /**< \brief Enable or disable depth writes
                                      \see pvr_depth_switch */
     }
 
-    struct txr {
+    struct txr_t {
         int     enable;         /**< \brief Enable/disable texturing
                                      \see   pvr_txr_switch */
         int     filter;         /**< \brief Filtering mode
