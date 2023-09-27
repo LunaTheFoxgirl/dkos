@@ -65,6 +65,13 @@ alias pvr_list_t = uint;
 struct pvr_poly_cxt_t {
     int     list_type;          /**< \brief Primitive list
                                      \see   pvr_lists */
+    gen gen;
+    blend blend;
+    fmt fmt;
+    depth depth;
+    txr txr;
+    txr txr2;
+
     struct gen {
         int     alpha;          /**< \brief Enable or disable alpha outside modifier
                                      \see   pvr_alpha_switch */
@@ -147,30 +154,6 @@ struct pvr_poly_cxt_t {
                                      \see   pvr_txr_fmts */
         pvr_ptr_t base;         /**< \brief Texture pointer */
     }
-
-    struct txr2 {
-        int     enable;         /**< \brief Enable/disable texturing
-                                     \see   pvr_txr_switch */
-        int     filter;         /**< \brief Filtering mode
-                                     \see   pvr_filter_modes */
-        int     mipmap;         /**< \brief Enable/disable mipmaps
-                                     \see   pvr_mip_switch */
-        int     mipmap_bias;    /**< \brief Mipmap bias
-                                     \see   pvr_mip_bias */
-        int     uv_flip;        /**< \brief Enable/disable U/V flipping
-                                     \see   pvr_uv_flip */
-        int     uv_clamp;       /**< \brief Enable/disable U/V clamping
-                                     \see   pvr_uv_clamp */
-        int     alpha;          /**< \brief Enable/disable texture alpha
-                                     \see   pvr_txralpha_switch */
-        int     env;            /**< \brief Texture color contribution
-                                     \see   pvr_txrenv_modes */
-        int     width;          /**< \brief Texture width (requires a power of 2) */
-        int     height;         /**< \brief Texture height (requires a power of 2) */
-        int     format;         /**< \brief Texture format
-                                     \see   pvr_txr_fmts */
-        pvr_ptr_t base;         /**< \brief Texture pointer */
-    }
 }
  
 /** \brief  PVR sprite context.
@@ -188,6 +171,10 @@ struct pvr_poly_cxt_t {
 struct pvr_sprite_cxt_t {
     int     list_type;          /**< \brief Primitive list
                                      \see   pvr_lists */
+    gen gen;
+    blend blend;
+    depth depth;
+    txr txr;
     struct gen {
         int     alpha;          /**< \brief Enable or disable alpha
                                      \see   pvr_alpha_switch */
