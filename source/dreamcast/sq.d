@@ -11,6 +11,7 @@
 */
 module dreamcast.sq;
 import core.volatile;
+
 extern(C):
 nothrow:
 @nogc:

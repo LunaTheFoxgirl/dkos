@@ -1,5 +1,9 @@
 module dreamcast.pvr.fog;
 
+extern(C):
+nothrow:
+@nogc:
+
 /**
    This table is used by the pvr_fog.c module to scale values for the PVR's
    fog table.  It can be used directly with each value multiplied by 255
