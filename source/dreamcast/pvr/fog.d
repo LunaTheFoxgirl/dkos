@@ -10,7 +10,7 @@ nothrow:
    to make perspectively correct table values for linear fog. The table does
    not include the value of 1.0 which represents full visual occlusion.
  */
-__gshared const float[] inverse_w_depth = [
+__gshared const float[] inverseWDepth = [
     0.94118, 0.88889, 0.84211, 0.80000, 0.76190, 0.72727, 0.69565, 0.66667,
     0.64000, 0.61538, 0.59259, 0.57143, 0.55172, 0.53333, 0.51613, 0.50000,
     0.47059, 0.44444, 0.42105, 0.40000, 0.38095, 0.36364, 0.34783, 0.33333,
@@ -35,7 +35,7 @@ __gshared const float[] inverse_w_depth = [
     fog functions in pvr_fog.c.  It just saves us one multiplcation per table
     entry.
 */
-__gshared const float[] inverse_w_depth260 = [
+__gshared const float[] inverseWDepth260 = [
     244.706, 231.111, 218.947, 208.000, 198.095, 189.091, 180.870, 173.333,
     166.400, 160.000, 154.074, 148.571, 143.448, 138.667, 134.194, 130.000,
     122.353, 115.556, 109.474, 104.000, 99.048, 94.545, 90.435, 86.667,
@@ -57,7 +57,7 @@ __gshared const float[] inverse_w_depth260 = [
 /** 
     lookup table for the fast neg_exp function 
 */
-__gshared const float[] exp_table = [
+__gshared const float[] expTable = [
     1.00000000,  0.96169060,  0.92484879,  0.88941842,
     0.85534531,  0.82257754,  0.79106510,  0.76075989,
     0.73161560,  0.70358789,  0.67663383,  0.65071243,

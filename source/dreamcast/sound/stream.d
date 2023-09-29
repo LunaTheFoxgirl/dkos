@@ -116,9 +116,9 @@ void *snd_stream_get_userdata(snd_stream_hnd_t hnd);
     \param  samplecnt       A pointer to the number of samples. This can be
                             modified by the filter, if appropriate.
 */
-typedef void (*snd_stream_filter_t)(snd_stream_hnd_t hnd, void *obj, int hz,
-                                    int channels, void **buffer,
-                                    int *samplecnt);
+alias snd_stream_filter_t = void function(snd_stream_hnd_t hnd, void* obj, int hz,
+                                    int channels, void** buffer,
+                                    int* samplecnt);
 
 /** \brief  Add a filter to the specified stream.
 
@@ -244,7 +244,7 @@ void snd_stream_queue_go(snd_stream_hnd_t hnd);
     \param  freq            The frequency of the sound.
     \param  st              1 if the sound is stereo, 0 if mono.
 */
-void snd_stream_start(snd_stream_hnd_t hnd, uint32 freq, int st);
+void snd_stream_start(snd_stream_hnd_t hnd, uint freq, int st);
 
 /** \brief  Stop a stream.
 
