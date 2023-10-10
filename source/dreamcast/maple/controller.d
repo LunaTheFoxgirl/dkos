@@ -141,22 +141,22 @@ nothrow:
     int joy2x;    /**< \brief Secondary joystick x-axis value. */
     int joy2y;    /**< \brief Secondary joystick y-axis value. */
 
-    pragma(inline, true) bool c() { return (buttons | CONT_C) != 0; }
-    pragma(inline, true) bool b() { return (buttons | CONT_B) != 0; }
-    pragma(inline, true) bool a() { return (buttons | CONT_A) != 0; }
-    pragma(inline, true) bool start() { return (buttons | CONT_START) != 0; }
-    pragma(inline, true) bool dpad_up() { return (buttons | CONT_DPAD_UP) != 0; }
-    pragma(inline, true) bool dpad_down() { return (buttons | CONT_DPAD_DOWN) != 0; }
-    pragma(inline, true) bool dpad_left() { return (buttons | CONT_DPAD_LEFT) != 0; }
-    pragma(inline, true) bool dpad_right() { return (buttons | CONT_DPAD_RIGHT) != 0; }
-    pragma(inline, true) bool z() { return (buttons | CONT_Z) != 0; }
-    pragma(inline, true) bool y() { return (buttons | CONT_Y) != 0; }
-    pragma(inline, true) bool x() { return (buttons | CONT_X) != 0; }
-    pragma(inline, true) bool d() { return (buttons | CONT_D) != 0; }
-    pragma(inline, true) bool dpad2_up() { return (buttons | CONT_DPAD2_UP) != 0; }
-    pragma(inline, true) bool dpad2_down() { return (buttons | CONT_DPAD2_DOWN) != 0; }
-    pragma(inline, true) bool dpad2_left() { return (buttons | CONT_DPAD2_LEFT) != 0; }
-    pragma(inline, true) bool dpad2_right() { return (buttons | CONT_DPAD2_RIGHT) != 0; }
+    pragma(inline, true) bool c() { return (buttons & CONT_C) != 0; }
+    pragma(inline, true) bool b() { return (buttons & CONT_B) != 0; }
+    pragma(inline, true) bool a() { return (buttons & CONT_A) != 0; }
+    pragma(inline, true) bool start() { return (buttons & CONT_START) != 0; }
+    pragma(inline, true) bool dpad_up() { return (buttons & CONT_DPAD_UP) != 0; }
+    pragma(inline, true) bool dpad_down() { return (buttons & CONT_DPAD_DOWN) != 0; }
+    pragma(inline, true) bool dpad_left() { return (buttons & CONT_DPAD_LEFT) != 0; }
+    pragma(inline, true) bool dpad_right() { return (buttons & CONT_DPAD_RIGHT) != 0; }
+    pragma(inline, true) bool z() { return (buttons & CONT_Z) != 0; }
+    pragma(inline, true) bool y() { return (buttons & CONT_Y) != 0; }
+    pragma(inline, true) bool x() { return (buttons & CONT_X) != 0; }
+    pragma(inline, true) bool d() { return (buttons & CONT_D) != 0; }
+    pragma(inline, true) bool dpad2_up() { return (buttons & CONT_DPAD2_UP) != 0; }
+    pragma(inline, true) bool dpad2_down() { return (buttons & CONT_DPAD2_DOWN) != 0; }
+    pragma(inline, true) bool dpad2_left() { return (buttons & CONT_DPAD2_LEFT) != 0; }
+    pragma(inline, true) bool dpad2_right() { return (buttons & CONT_DPAD2_RIGHT) != 0; }
 }
 
 /** \brief   Controller automatic callback type.
