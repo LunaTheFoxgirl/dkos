@@ -6,8 +6,9 @@ toolchainRequirements "sh-elf-gdc"
 systemDependencies "KallistiOS installed in /opt/toolchains/dc via gcc or cygwin"
 description "KallistOS for DLang"
 
-lflags "-nostdlib" "-T" "$PACKAGE_DIR/ldscripts/shlelf.xc"
-dflags "-nophoboslib" "-ffunction-sections" "-fdata-sections" "-matomic-model=soft-imask" "-ftls-model=local-exec" "-flto" "-m4-single-only"
+dependency "tinyd-rt" version="~>1.0.0"
+
+lflags "-T" "$PACKAGE_DIR/ldscripts/shlelf.xc"
 targetPath "out/"
 
 sourceFiles \
