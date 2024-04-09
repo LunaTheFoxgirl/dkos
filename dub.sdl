@@ -6,7 +6,7 @@ toolchainRequirements "sh-elf-gdc"
 systemDependencies "KallistiOS installed in /opt/toolchains/dc via gcc or cygwin"
 description "KallistOS for DLang"
 
-dependency "tinyd-rt" version="~>0.1.0"
+dependency "tinyd-rt" version="~>0.1.1"
 subConfiguration "tinyd-rt" "dreamcast"
 
 lflags "-T" "$PACKAGE_DIR/ldscripts/shlelf.xc"
