@@ -6,8 +6,8 @@ description "KallistOS for DLang"
 
 dependency "numem" version=">=1.0.6"
 dependency "numem:hookset-libc" version="*"
-dependency "nulib" version=">=1.0.0"
-dependency "nurt" version=">=0.1.3"
+dependency "nulib" version=">=0.2.0"
+dependency "nurt" version=">=0.1.4"
 
 configuration "dreamcast" {
     lflags "-T" "$PACKAGE_DIR/ldscripts/shlelf.xc"
