@@ -1,0 +1,11 @@
+name "hello_square"
+description "Example application which draws a movable square with a trail."
+authors "Luna"
+copyright "Copyright © 2023, Luna"
+license "BSD-2-Clause"
+
+dependency "dkos" path="../../"
+
+targetPath "../../out/"
+targetName "hello_square.elf"
+targetType "executable"

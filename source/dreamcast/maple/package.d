@@ -25,7 +25,7 @@
     \see    dc/maple/vmu.h
 */
 module dreamcast.maple;
-import core.stdc.queue;
+import dreamcast.sq;
 
 extern(C):
 nothrow:

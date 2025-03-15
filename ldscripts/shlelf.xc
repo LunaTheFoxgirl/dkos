@@ -3,7 +3,9 @@ OUTPUT_FORMAT("elf32-shl", "elf32-shl",
 	      "elf32-shl")
 OUTPUT_ARCH(sh)
 ENTRY(start)
-SEARCH_DIR("/usr/local/dc-new/sh-elf/sh-elf/lib");
+SEARCH_DIR("/usr/local/dc/sh-elf/sh-elf/lib");
+SEARCH_DIR("/opt/toolchains/dc/kos/lib/dreamcast");
+SEARCH_DIR("$DUB_BUILD_PATH");
 SECTIONS
 {
   /* Read-only sections, merged into text segment: */

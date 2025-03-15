@@ -10,22 +10,27 @@
     \author Luna the Foxgirl
 */
 module dreamcast.sq;
-import core.volatile;
+public import numem.volatile;
 
 extern(C):
 nothrow:
 @nogc:
 
+struct QHead(T) {
+    T* first;
+    T** last;
+}
 
+struct QEntry(T) {
+    T* next;
+    T** prev;
+}
 
 /** \brief  Store Queue 0 access register */
-// enum uint* QACR0 = cast(uint*)0xff000038;
+enum uint* QACR0 = cast(uint*)0xff000038;
 
 /** \brief  Store Queue 1 access register */
-// enum uint* QACR1 = cast(uint*)0xff00003c;
-
-enum QACR0 = VolatileRef!(uint, cast(uint*)0xff000038)();
-enum QACR1 = VolatileRef!(uint, cast(uint*)0xff00003c)();
+enum uint* QACR1 = cast(uint*)0xff00003c;
 
  
 /** \brief  Clear a block of memory.
