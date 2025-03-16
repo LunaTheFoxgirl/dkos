@@ -4,6 +4,8 @@ copyright "Copyright © 2023, Luna"
 authors "Luna"
 description "KallistOS for DLang"
 
+buildRequirements "allowWarnings" "silenceWarnings"
+
 dependency "numem" version=">=1.0.6"
 dependency "numem:hookset-libc" version="*"
 dependency "nulib" version=">=0.2.0"

@@ -160,10 +160,10 @@ struct vid_mode_t {
 }
 
 /** \brief  The list of builtin video modes. Do not modify these! */
-extern vid_mode_t[DM_MODE_COUNT] vid_builtin;
+extern __gshared vid_mode_t[DM_MODE_COUNT] vid_builtin;
 
 /** \brief  The current video mode. Do not modify directly! */
-extern vid_mode_t* vid_mode;
+extern __gshared vid_mode_t* vid_mode;
 
 // These point to the current drawing area. If you're not using a multi-buffered
 // mode, that means they do what KOS always used to do (they'll point at the
@@ -173,10 +173,10 @@ extern vid_mode_t* vid_mode;
 // compatibility's sake).
 
 /** \brief  16-bit size pointer to the current drawing area. */
-extern ushort* vram_s;
+extern __gshared ushort* vram_s;
 
 /** \brief  32-bit size pointer to the current drawing area. */
-extern uint* vram_l;
+extern __gshared uint* vram_l;
 
 
 /** \brief  Retrieve the connected video cable type.
@@ -211,16 +211,20 @@ void vid_set_start(uint base);
 */
 void vid_flip(int fb);
 
-/** \brief  Set the border color of the display.
+/**
+    Set the border color of the display.
 
     This sets the color of the border area of the display. On some screens, the
     border area may not be shown at all, whereas on some displays you may see
     the whole thing.
 
-    \param  r               The red value of the color (0-255).
-    \param  g               The green value of the color (0-255).
-    \param  b               The blue value of the color (0-255).
-    \return                 Old border color value (RGB888)
+    Params:
+        r = The red value of the color (0-255).
+        g = The green value of the color (0-255).
+        b = The blue value of the color (0-255).
+    
+    Returns:
+        Old border color value (RGB888)
 */
 uint vid_border_color(int r, int g, int b);
 

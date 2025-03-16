@@ -21,7 +21,7 @@ module dreamcast.pvr.pvr;
 import dreamcast.sq;
 import dreamcast.arch.types;
 import dreamcast.arch.memory;
-import kos.img;
+import dkos.image;
 
 extern(C):
 nothrow:
