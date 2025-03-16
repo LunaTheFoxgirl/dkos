@@ -1,0 +1,13 @@
+name "hello_world"
+description "Example application which writes to the serial output buffer."
+authors "Luna"
+copyright "Copyright © 2023, Luna"
+license "BSD-2-Clause"
+
+buildRequirements "allowWarnings" "silenceWarnings"
+
+dependency "dkos" path="../../"
+
+targetPath "../../out/"
+targetName "hello.elf"
+targetType "executable"
